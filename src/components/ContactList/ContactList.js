@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { useGetContactsQuery } from '../../redux/contactSlice';
+import { useGetContactsQuery } from '../../redux/contacts/contactsApi';
 import ContactItem from 'components/ContactItem/index';
 import { List } from './ContactList.Styled';
 

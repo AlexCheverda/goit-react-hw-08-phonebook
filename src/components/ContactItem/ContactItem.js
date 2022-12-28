@@ -1,4 +1,4 @@
-import { useDeleteContactMutation } from '../../redux/contactSlice';
+import { useDeleteContactMutation } from '../../redux/contacts/contactsApi';
 import PropTypes from 'prop-types';
 import { Item, Btn } from './ContactItem.Styled';
 // import { deleteContact } from 'redux/actions';

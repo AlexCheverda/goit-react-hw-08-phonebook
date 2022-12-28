@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   useGetContactsQuery,
   useAddContactMutation,
-} from '../../redux/contactSlice';
+} from '../../redux/contacts/contactsApi';
 import { nanoid } from "nanoid";
 import { Form, Input, Label, FormBtn } from './ContactForm.Styled';
 
