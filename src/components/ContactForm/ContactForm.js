@@ -1,19 +1,21 @@
 import Notiflix from "notiflix";
+import { Form, Button, FloatingLabel } from "react-bootstrap";
 import { useState } from "react";
 import {
   useGetContactsQuery,
   useAddContactMutation,
 } from '../../redux/contacts/contactsApi';
-import { nanoid } from "nanoid";
-import { Form, Input, Label, FormBtn } from './ContactForm.Styled';
+import style from './ContactForm.module.css';
+// import { nanoid } from "nanoid";
+// import { Form, Input, Label, FormBtn } from './ContactForm.Styled';
 
 const ContactForm = () => {
   const { data } = useGetContactsQuery();
   const [addContact] = useAddContactMutation();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const nameInputId = nanoid();
-  const numberInputId = nanoid();
+  // const nameInputId = nanoid();
+  // const numberInputId = nanoid();
 
   const handleInputChange = evt => {
     const { name, value } = evt.currentTarget;
@@ -36,7 +38,7 @@ const ContactForm = () => {
       console.log(error);
     }
     reset();
-  };  
+  };
 
   const reset = () => {
     setName('');
@@ -44,31 +46,41 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleAddContact}>
-      <Label htmlFor={nameInputId}>Name</Label>
-      <Input
-        type="text"
-        name="name"
-        value={name}
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-        required
-        onChange={handleInputChange}
-        id={nameInputId}
-      />
-      <Label htmlFor={numberInputId}>Number</Label>
-      <Input
-        type="tel"
-        name="number"
-        value={number}
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-        onChange={handleInputChange}
-        id={numberInputId}
-      />
-      <FormBtn type="submit">Add Contact</FormBtn>
-    </Form>
+    <div>
+      <Form onSubmit={handleAddContact} className={style.addContactForm}>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <FloatingLabel controlId="formBasicName" label="Type Name">
+            <Form.Control
+              type="text"
+              name="name"
+              value={name}
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              required
+              onChange={handleInputChange}
+            />
+          </FloatingLabel>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicNumber">
+          <FloatingLabel controlId="formBasicNumber" label="Type Number">
+            <Form.Control
+              type="tel"
+              name="number"
+              value={number}
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+              required
+              onChange={handleInputChange}
+            />
+          </FloatingLabel>
+        </Form.Group>
+        <div className="d-grid gap-2">
+          <Button variant="outline-light" type="submit">
+            Add Contact
+          </Button>
+        </div>
+      </Form>
+    </div>
   );
 };
 

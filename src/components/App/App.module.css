@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+/* import styled from 'styled-components';
 
 export const Title = styled.h1`
     margin: 0;
@@ -37,4 +37,12 @@ export const Container = styled.div`
     font-size: 30px;
     color: rgb(6, 58, 58);
     background-color: #f8e806;
-`;
+`; */
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
