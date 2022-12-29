@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+/* import styled from 'styled-components';
 
 export const FilterBox = styled.div`
     display: flex;
@@ -20,4 +20,15 @@ export const Input = styled.input`
     outline: none;
     border: 1px solid rgb(19, 86, 209);
     border-radius: 15px;
-`;
+`; */
+
+.filter {
+    margin-top: 30px;
+    border-radius: 2px;
+  
+    box-shadow: 0px 0px 9px 3px rgba(123, 154, 156, 1);
+  }
+  
+  .filterInput {
+    border-radius: 2px;
+  }
