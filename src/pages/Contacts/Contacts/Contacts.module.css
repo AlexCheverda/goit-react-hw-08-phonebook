@@ -1,0 +1,12 @@
+.contactPage {
+    display: flex;
+    margin-top: 40px;
+    min-height: 100vh;
+    column-gap: 40px;
+  
+    justify-content: center;
+  }
+  
+  .contacts {
+    max-width: fit-content;
+  }
