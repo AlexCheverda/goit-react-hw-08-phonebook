@@ -11,15 +11,20 @@
   margin-left: auto;
   margin-right: auto;
   color: rgb(6, 58, 58);
-  padding: 20px;
-  font-size: 40px;
-  box-shadow: 0px 0px 9px 3px rgba(123, 154, 156, 1);
-  border-radius: 15px;
+  padding: 30px;
+  font-size: 48px;
+  text-transform: uppercase;
+  transition: color 250ms linear;
+}
+.homeTitle:hover {
+  color: rgb(223, 118, 32);
 }
   
 .homeText {
   padding: 20px;
-  color: rgb(17, 75, 75);
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(17, 63, 75);
   font-size: 30px;
 }
   
@@ -30,5 +35,5 @@
 }
 
 .homeLink:hover {
-  color: cadetblue;
+  color: rgb(223, 118, 32);
 }
