@@ -2,7 +2,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useState, Suspense } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/authOperations';
-import style from './LoginForm.module.css';
+import style from './LogInForm.module.css';
 
 import Loader from 'components/Loader';
 

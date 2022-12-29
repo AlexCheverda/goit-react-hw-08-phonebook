@@ -2,7 +2,7 @@ import Notiflix from "notiflix";
 import { Form, Button, FloatingLabel } from "react-bootstrap";
 import { useState } from "react";
 import {
-  useGetContactsQuery,
+  useGetContactQuery,
   useAddContactMutation,
 } from '../../redux/contacts/contactsApi';
 import style from './ContactForm.module.css';
@@ -10,7 +10,7 @@ import style from './ContactForm.module.css';
 // import { Form, Input, Label, FormBtn } from './ContactForm.Styled';
 
 const ContactForm = () => {
-  const { data } = useGetContactsQuery();
+  const { data } = useGetContactQuery();
   const [addContact] = useAddContactMutation();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
