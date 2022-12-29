@@ -1,8 +1,8 @@
 .mainContainer {
-    height: 100%;
-    background: radial-gradient(
-      circle,
-      rgb(252, 251, 251) 0%,
-      rgb(199, 216, 235) 100%
-    );
-  }
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgb(248, 232, 6) 0%,
+    rgb(11, 194, 250) 100%
+  );
+}

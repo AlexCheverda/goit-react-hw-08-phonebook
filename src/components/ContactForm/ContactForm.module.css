@@ -44,9 +44,9 @@ export const FormBtn = styled.button`
     border-radius: 15px;
     background: radial-gradient(
     circle,
-    rgb(237, 238, 174) 0%,
-    rgb(6, 123, 231) 100%
+    rgb(248, 232, 6) 0%,
+    rgb(11, 194, 250) 100%
   );
   padding: 30px 20px;
-  box-shadow: 0px 0px 9px 3px rgba(123, 154, 156, 1);
+  box-shadow: 1px 2px 2px 2px rgb(196, 179, 179);
 }

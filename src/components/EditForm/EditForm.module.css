@@ -1,20 +1,20 @@
 .modal {
-    background-color: aquamarine;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+  background-color: rgb(19, 86, 209);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
   
-  .modalBody,
-  .modalFooter,
-  .modalHeader {
-    background: radial-gradient(
-      circle,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
-    );
-  }
+.modalBody,
+.modalFooter,
+.modalHeader {
+  background: radial-gradient(
+    circle,
+    rgb(248, 232, 6) 0%,
+    rgb(11, 194, 250) 100%
+  );
+}
   
-  .modalInput {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-  }
+.modalInput {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
